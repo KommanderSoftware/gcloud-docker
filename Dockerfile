@@ -4,7 +4,7 @@ LABEL name=gcloud-docker
 LABEL version="117.0.0"
 
 # Install missing Docker dependencies
-RUN apt-get update && apt-get install -y gnupg2 software-properties-common && apt-get clean
+RUN apt-get update && apt-get install -y gnupg2 software-properties-common gettext && apt-get clean
 
 # Add Docker to apt repositories
 RUN curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add -
