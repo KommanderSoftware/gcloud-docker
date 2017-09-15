@@ -1,7 +1,7 @@
 FROM google/cloud-sdk:171.0.0-slim
 
 LABEL name=gcloud-docker
-LABEL version="117.0.0"
+LABEL version="1.1"
 
 # Install missing Docker dependencies
 RUN apt-get update && apt-get install -y gnupg2 software-properties-common gettext && apt-get clean
